@@ -1,2 +1,2 @@
 #!/bin/bash
-cd /var _
+cd - _
