@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Gracefully reloads Gunicorn.
+
+MASTER_PID=$(ps auxf | pgrep '[g]unicorn' | awk '{print $2}')
+
+# Gracefully restart Gunicorn
+kill -s HUP "$MASTER_PID"
